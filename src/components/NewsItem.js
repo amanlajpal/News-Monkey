@@ -5,7 +5,7 @@ export class NewsItem extends Component {
         let { title, description, url, weburl, date, author, source } = this.props;
         return <div className='my-3'>
             <div className="card">
-                <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{'zIndex': 1, 'left':'90%'}}>
+                <span className="position-absolute top-0 end-0 badge rounded-pill bg-danger">
                     {source}
                 </span>
                 <img src={url} className="card-img-top" alt="..." />
@@ -14,7 +14,7 @@ export class NewsItem extends Component {
                     <p className="card-text">{description}</p>
                     <p className="card-text"><small className="text-muted">By {author ? author : "Unknown"} on {new Date(date).toGMTString()}</small></p>
 
-                    <a href={weburl} rel="noreferrer" target='_blank' className="btn btn-primary">Read More</a>
+                    <a href={weburl} rel="noreferrer" target='_blank' className="btn btn-dark">Read More</a>
                 </div>
             </div>
         </div>;
